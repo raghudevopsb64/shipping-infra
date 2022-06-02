@@ -7,3 +7,14 @@ module "vpc" {
   AZ             = var.AZ
 }
 
+module "mysql" {
+  depends_on          = [module.vpc]
+  source              = "git::https://github.com/raghudevopsb64/tf-module-rds-mysql.git"
+  ENGINE              = var.ENGINE
+  ENGINE_VERSION      = var.ENGINE_VERSION
+  INSTANCE_CLASS      = var.INSTANCE_CLASS
+  NAME                = var.NAME
+  SKIP_FINAL_SNAPSHOT = var.SKIP_FINAL_SNAPSHOT
+  ENV                 = var.ENV
+  COMPONENT           = var.COMPONENT
+}
