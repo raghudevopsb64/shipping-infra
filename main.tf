@@ -36,5 +36,7 @@ module "app" {
   PORT                    = var.PORT
   WORKSTATION_IP          = var.WORKSTATION_IP
   VPC_ACCESS_TO_ALB       = [module.vpc.VPC_CIDR]
+  IAM_POLICY_CREATE       = true
+  PRIVATE_HOSTED_ZONE_ID  = module.vpc.PRIVATE_HOSTED_ZONE_ID
 }
 
