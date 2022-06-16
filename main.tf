@@ -21,6 +21,7 @@ module "mysql" {
   VPC_CIDR               = module.vpc.VPC_CIDR
   SUBNET_IDS             = module.vpc.SUBNET_IDS
   PRIVATE_HOSTED_ZONE_ID = module.vpc.PRIVATE_HOSTED_ZONE_ID
+  WORKSTATION_IP         = var.WORKSTATION_IP
 }
 
 module "app" {
