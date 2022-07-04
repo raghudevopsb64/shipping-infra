@@ -7,7 +7,7 @@ INSTANCE_CLASS      = "db.t3.micro"
 NAME                = "dummy"
 SKIP_FINAL_SNAPSHOT = true
 
-EC2_NODE_TYPE           = "t3.small"
+EC2_NODE_TYPE           = "t3.medium"
 PORT                    = 8080
 ONDEMAND_INSTANCE_COUNT = 0
 SPOT_INSTANCE_COUNT     = 2
