@@ -41,5 +41,6 @@ module "app" {
   IAM_POLICY_CREATE       = true
   PRIVATE_HOSTED_ZONE_ID  = module.vpc.PRIVATE_HOSTED_ZONE_ID
   PROMETHEUS_IP           = var.PROMETHEUS_IP
+  APP_VERSION             = var.APP_VERSION
 }
 
